@@ -12,7 +12,13 @@ services:
       - django_app
     networks:
       - notes-app-nw
+   web:
+    image: "monishkha/notes-app:latest"
+    
 
+    ports:
+      - "8080:8000"
+   
   django_app:
     build:
       context: .
